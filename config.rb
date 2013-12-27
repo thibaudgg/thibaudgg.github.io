@@ -38,6 +38,13 @@
 # Reload the browser automatically whenever files change
 activate :livereload
 
+# https://github.com/tvaughan/middleman-deploy
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.branch = 'master'
+  deploy.build_before = true
+end
+
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper
@@ -53,13 +60,6 @@ set :images_dir, 'img'
 
 # Build-specific configuration
 configure :build do
-  # https://github.com/tvaughan/middleman-deploy
-  activate :deploy do |deploy|
-    deploy.method = :git
-    deploy.branch = 'master'
-    deploy.build_before = true
-  end
-
   # https://github.com/follmann/middleman-favicon-maker
   activate :favicon_maker
 
