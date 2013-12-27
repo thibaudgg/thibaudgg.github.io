@@ -53,6 +53,13 @@ set :images_dir, 'img'
 
 # Build-specific configuration
 configure :build do
+  # https://github.com/tvaughan/middleman-deploy
+  activate :deploy do |deploy|
+    deploy.method = :git
+    deploy.branch = 'master'
+    deploy.build_before = true
+  end
+
   # https://github.com/follmann/middleman-favicon-maker
   activate :favicon_maker
 
