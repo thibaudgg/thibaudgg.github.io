@@ -43,6 +43,7 @@ activate :deploy do |deploy|
   deploy.method = :git
   deploy.branch = 'master'
   deploy.build_before = true
+  deploy.clean = false
 end
 
 # Methods defined in the helpers block are available in templates
