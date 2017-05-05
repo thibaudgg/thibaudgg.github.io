@@ -1,7 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'middleman'
-gem 'middleman-sprockets', '4.0.0.rc.1'
-gem 'middleman-livereload'
-gem 'middleman-favicon-maker'
+gem 'middleman-autoprefixer'
 gem 'middleman-gh-pages'
+gem 'middleman-livereload'
+gem 'middleman-minify-html'
+gem 'middleman-sprockets'
+
+gem 'sassc', '~> 1.8'
