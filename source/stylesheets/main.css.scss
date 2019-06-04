@@ -1,8 +1,7 @@
 @import 'railscasts';
-
 @font-face {
   font-family: 'Bitstream Vera Sans';
-  src: url(../fonts/veramono.ttf);
+  src: url("../fonts/veramono.ttf");
 }
 
 html {
@@ -13,14 +12,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0;
+  margin: 0 auto;
   height: 100%;
   width: 100%;
-  font-size: 10pt;
   font-size: 3.6vw;
-
-  @media screen and (min-width: 670px) {
-    font-size: 18pt;
+  @media only screen and (min-width: 666px) and (orientation : landscape) {
+    font-size: 1.4rem;
   }
 }
 
