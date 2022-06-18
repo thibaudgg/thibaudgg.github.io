@@ -28,7 +28,7 @@ GEM
     execjs (2.7.0)
     fast_blank (1.0.0)
     fastimage (2.1.5)
-    ffi (1.9.25)
+    ffi (1.15.5)
     haml (5.0.4)
       temple (>= 0.8.0)
       tilt
@@ -132,5 +132,8 @@ DEPENDENCIES
   middleman-minify-html
   middleman-sprockets
 
+RUBY VERSION
+   ruby 2.7.4p191
+
 BUNDLED WITH
-   1.17.2
+   1.17.3
