@@ -1,10 +1,7 @@
 source 'https://rubygems.org'
 
-ruby '2.7.4'
+ruby '3.1.2'
 
-gem 'middleman'
-gem 'middleman-autoprefixer'
+gem 'middleman', '~> 4.4'
 gem 'middleman-gh-pages'
 gem 'middleman-livereload'
-gem 'middleman-minify-html'
-gem 'middleman-sprockets'

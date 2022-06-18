@@ -1,4 +1,3 @@
-@import 'railscasts.css';
 @font-face {
   font-family: 'Bitstream Vera Sans';
   src: url("../fonts/veramono.ttf");
@@ -16,7 +15,10 @@ body {
   height: 100%;
   width: 100%;
   font-size: 3.6vw;
-  @media only screen and (min-width: 666px) {
+}
+
+@media only screen and (min-width: 666px) {
+  body {
     font-size: 1.4rem;
   }
 }
@@ -35,8 +37,30 @@ h2 {
 
 a {
   text-decoration: none;
+}
 
-  :hover {
-    text-decoration: underline;
-  }
+a:hover {
+  text-decoration: underline;
+}
+
+/* Railscasts Theme */
+body {
+  background: #232323;
+}
+
+pre code {
+  display: block;
+  color: #E6E1DC;
+}
+
+pre .keyword {
+  color: #C26230;
+}
+
+pre .string {
+  color: #A5C261;
+}
+
+pre .symbol {
+  color: #6D9CBE;
 }
