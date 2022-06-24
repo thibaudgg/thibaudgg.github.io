@@ -57,7 +57,7 @@ pre .keyword {
   color: #C26230;
 }
 
-pre .string {
+pre .string, pre a {
   color: #A5C261;
 }
 
