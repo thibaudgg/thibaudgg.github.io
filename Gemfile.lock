@@ -89,19 +89,17 @@ GEM
     parallel (1.22.1)
     parslet (2.0.0)
     public_suffix (4.0.7)
-    rack (2.2.8.1)
+    rack (2.2.13)
     rack-livereload (0.3.17)
       rack
     rake (13.0.6)
     rb-fsevent (0.11.1)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    rexml (3.3.6)
-      strscan
+    rexml (3.3.9)
     sassc (2.4.0)
       ffi (~> 1.9)
     servolux (0.13.0)
-    strscan (3.1.0)
     temple (0.8.2)
     thor (1.2.1)
     tilt (2.0.10)
@@ -111,7 +109,7 @@ GEM
       concurrent-ruby (~> 1.0)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
-    webrick (1.7.0)
+    webrick (1.8.2)
     zeitwerk (2.6.11)
 
 PLATFORMS
