@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Bitstream Vera Sans';
+  font-family: "Bitstream Vera Sans";
   src: url("../fonts/veramono-2c2e2ded.ttf");
 }
 
@@ -24,7 +24,7 @@ body {
 }
 
 code {
-  font-family: 'Bitstream Vera Sans', monospace;
+  font-family: "Bitstream Vera Sans", monospace;
   line-height: 125%;
 }
 
@@ -50,17 +50,18 @@ body {
 
 pre code {
   display: block;
-  color: #E6E1DC;
+  color: #e6e1dc;
 }
 
 pre .keyword {
-  color: #C26230;
+  color: #c26230;
 }
 
-pre .string, pre a {
-  color: #A5C261;
+pre .string,
+pre a {
+  color: #a5c261;
 }
 
 pre .symbol {
-  color: #6D9CBE;
+  color: #6d9cbe;
 }
