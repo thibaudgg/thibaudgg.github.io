@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta http-equiv="content-language" content="en">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#232323">
     <meta name="description" content="Thibaud Guillaume-Gentil Personal Website">
     <meta name="author" content="Thibaud Guillaume-Gentil">
-    <title>Thibaud Guillaume-Gentil – thibaudgg</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= current_page.data.title || "Thibaud Guillaume-Gentil – thibaudgg" %></title>
+    <% if current_page.path == "404.html" -%>
+    <base href="/">
+    <% end -%>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <%= stylesheet_link_tag "main" %>
-    <%= javascript_include_tag "highlight", defer: "defer" %>
   </head>
   <body>
     <%= yield %>

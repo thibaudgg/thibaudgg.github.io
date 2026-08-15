@@ -1,14 +1,32 @@
+<%
+  k = ->(name) { %(<span class="symbol">#{name}:</span>) }
+  q = ->(inner) { %(<span class="string">"</span>#{inner}<span class="string">"</span>) }
+  i = ->(*words) { %(<span class="string">%i[</span>#{words.join(" ")}<span class="string">]</span>) }
+  a = ->(href, label, text) { %(<a href="#{href}" aria-label="#{label}">#{text}</a>) }
+
+  github    = a["https://github.com/thibaudgg", "GitHub/thibaudgg", "github"]
+  rubygems  = a["https://rubygems.org/profiles/thibaudgg", "My Ruby Gems", "rubygems"]
+  linkedin  = a["https://www.linkedin.com/in/thibaudgg/", "LinkedIn/thibaudgg", "linkedin"]
+  x         = a["https://x.com/thibaudgg", "@thibaudgg on X", "x"]
+  gatemedia = a["https://www.gatemedia.ch", "GateMedia", "GateMedia"]
+  csa       = a["https://csa-admin.org", "CSA Admin", "CSA Admin"]
+  pgp       = a["/key.asc", "PGP Public Key", "PGP Key"]
+  email     = a["mailto:thibaud@thibaud.gg", "Email me at thibaud@thibaud.gg", "email"]
+  signal    = a["https://signal.me/#eu/5SboJyaj9dAomyVh7uB0uz6BgDBG2jPhBU-13UdgYn2t8V2IsaNATbAfepUotumL", "Message me on Signal", "signal"]
+  imessage  = a["imessage://thibaud@thibaud.gg", "iMessage me at thibaud@thibaud.gg", "imessage"]
+  maps      = a["https://maps.google.com/maps?q=La+Chaux-de-Fonds%2C+Switzerland", "Google Maps: La Chaux-de-Fonds, Switzerland", "Switzerland"]
+%>
 <pre>
-  <code data-language="ruby">
-Human.new \
-        id: "<h1>thibaudgg</h1>",
-      name: "<h2>Thibaud Guillaume-Gentil</h2>",
-      info: "<h2>Senior Ruby on Rails Developer</h2>",
-      urls: %i[<a href="https://github.com/thibaudgg" aria-label="GitHub/thibaudgg">github</a> <a href="https://rubygems.org/profiles/thibaudgg" aria-label="My Ruby Gems">rubygems</a> <a href="https://www.linkedin.com/in/thibaudgg/" aria-label="LinkedIn/thibaudgg">linkedin</a> <a href="https://x.com/thibaudgg" aria-label="@thibaudgg on X">x</a>],
-      work: "<h2><a href="https://www.gatemedia.ch" aria-label="GateMedia">GateMedia</a></h2>",
-   privacy: "<a href="/key.asc" aria-label="PGP Public Key">PGP Key</a>",
-   project: "<a href="https://csa-admin.org" aria-label="CSA Admin">CSA Admin</a>",
-  contacts: %i[<a href="mailto:thibaud@thibaud.gg" aria-label="Email me at thibaud@thibaud.gg">email</a> <a href="https://signal.me/#eu/5SboJyaj9dAomyVh7uB0uz6BgDBG2jPhBU-13UdgYn2t8V2IsaNATbAfepUotumL" aria-label="Message me on Signal">signal</a> <a href="imessage://thibaud@thibaud.gg" aria-label="iMessage me at thibaud@thibaud.gg">imessage</a>],
-  location: "<a href="https://maps.google.com/maps?q=La+Chaux-de-Fonds%2C+Switzerland" aria-label="Google Maps: La Chaux-de-Fonds, Switzerland">Switzerland</a>"
+  <code>
+Human.<span class="keyword">new</span> \
+        <%= k[:id] %> <%= q["<h1>thibaudgg</h1>"] %>,
+      <%= k[:name] %> <%= q["<h2>Thibaud Guillaume-Gentil</h2>"] %>,
+      <%= k[:info] %> <%= q["<h2>Senior Ruby on Rails Developer</h2>"] %>,
+      <%= k[:urls] %> <%= i[github, rubygems, linkedin, x] %>,
+      <%= k[:work] %> <%= q["<h2>#{gatemedia}</h2>"] %>,
+   <%= k[:project] %> <%= q[csa] %>,
+   <%= k[:privacy] %> <%= q[pgp] %>,
+  <%= k[:contacts] %> <%= i[email, signal, imessage] %>,
+  <%= k[:location] %> <%= q[maps] %>
   </code>
 </pre>
