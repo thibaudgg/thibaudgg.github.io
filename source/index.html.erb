@@ -14,6 +14,7 @@
   email     = a["mailto:thibaud@thibaud.gg", "Email me at thibaud@thibaud.gg", "email"]
   signal    = a["https://signal.me/#eu/5SboJyaj9dAomyVh7uB0uz6BgDBG2jPhBU-13UdgYn2t8V2IsaNATbAfepUotumL", "Message me on Signal", "signal"]
   imessage  = a["imessage://thibaud@thibaud.gg", "iMessage me at thibaud@thibaud.gg", "imessage"]
+  xdm       = a["https://x.com/messages/compose?recipient_screen_name=thibaudgg", "Direct message me on X", "x"]
   maps      = a["https://maps.google.com/maps?q=La+Chaux-de-Fonds%2C+Switzerland", "Google Maps: La Chaux-de-Fonds, Switzerland", "Switzerland"]
 %>
 <pre>
@@ -26,7 +27,7 @@ Human.<span class="keyword">new</span> \
       <%= k[:work] %> <%= q["<h2>#{gatemedia}</h2>"] %>,
    <%= k[:project] %> <%= q[csa] %>,
    <%= k[:privacy] %> <%= q[pgp] %>,
-  <%= k[:contacts] %> <%= i[email, signal, imessage] %>,
+  <%= k[:contacts] %> <%= i[email, signal, imessage, xdm] %>,
   <%= k[:location] %> <%= q[maps] %>
   </code>
 </pre>
